@@ -35,8 +35,9 @@ var outdoor = new Image();
 outdoor.src = "img/outdoor.jpg";
 var bg;
 outdoor.onload = function() {
-    bg = container.addChild(new createjs.Bitmap(this)).set({alpha:0.01});
+    bg = container.addChild(new createjs.Bitmap(this)).set({alpha:1});
     bg.addEventListener("click", f);
+    container.addChild(bg);
 }
 
 container.addEventListener("click", function(event) {
